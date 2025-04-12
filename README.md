@@ -1,4 +1,9 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Info Display
+I have a some e-readers lying about that I would like to put to use. I discovered a program called electric sign that will take a screenshot of the page and display it as a screensaver on ereaders. I want to have it display some info from some api's, such as the weather, news, transit alerts, github requests, todos, etc. However, the ereaders I have are way out of date and can not really access the internet due ssl.
+
+Therefore, I ended making a small web app that these ereaders can reach locally. The web app will do all the calling of the various api's.
+
+There's no reason it can't be used by anything else or deployed on a cloud service, but the site is made to be used with http for the reason above. It shouldn't be too hard to add this after the fact.
 
 ## Getting Started
 
@@ -6,28 +11,20 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## TODO:
+- Settings page to control certain pieces of info(zip code, transit lines, etc)
+- Create admin page to enable or disable different connections
+- Save some settings into a database(sqllite since this is an app that's meant to be run locally)
+- Cache the calls for a couple of minutes
 
 ## Deploy on Vercel
 
