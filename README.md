@@ -5,6 +5,9 @@ Therefore, I ended making a small web app that these ereaders can reach locally.
 
 There's no reason it can't be used by anything else or deployed on a cloud service, but the site is made to be used with http for the reason above. It shouldn't be too hard to add this after the fact.
 
+## Sample of page:
+![alt text](image.png)
+
 ## Getting Started
 
 First, run the development server:
