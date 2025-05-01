@@ -3,7 +3,7 @@ import { filteredTransitAlerts, getTransitAlerts, TransitAlert, TransitAlertResp
 import DOMPurify from "dompurify";
 import { JSDOM } from "jsdom";
 
-const TRANSIT_ALERTS_MAX = 5;
+const TRANSIT_ALERTS_MAX = 4;
 
 export async function TransitAlerts() {
     const transitAlerts = TransitAlertResponseSchema.parse(
@@ -16,7 +16,7 @@ export async function TransitAlerts() {
         );
     return(
         <section>
-          <h3 className="text-3xl font-semibold">Transit Alerts</h3>
+          <h3 className="text-2xl font-semibold mb-2">Transit Alerts</h3>
           <ul>
             {transitAlerts.entity
               .slice(0, TRANSIT_ALERTS_MAX)
@@ -25,6 +25,7 @@ export async function TransitAlerts() {
                   <li
                     key={id}
                     dangerouslySetInnerHTML={{ __html: sanitizeAlert(alert) }}
+                    className="border-2 rounded-sm p-1"
                   ></li>
                 );
               })}

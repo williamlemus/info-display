@@ -42,7 +42,8 @@ export const authorizeApi = async () => {
 };
 
 export const setToken = async (code: string | null) => {
-  // will need to make some sort of log out
+  // TODO: progamatically remove tokens when we get an expired error
+  // this is causing issues
   const token = await prisma.refreshToken.findUnique({
     where: { source: "google" },
   });

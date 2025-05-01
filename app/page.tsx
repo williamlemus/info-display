@@ -12,11 +12,11 @@ export default async function Home({
 }) {
   // Nook simple touch is 800x600
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] justify-items-center gap-10 sm:p-10 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="text-3xl font-bold flex justify-self-stretch justify-between h-[64px]">
+    <div className="grid grid-rows-[20px_1fr_20px] justify-items-center gap-10 p-8 font-[family-name:var(--font-geist-sans)]">
+      <h1 className="text-3xl font-bold flex justify-self-stretch justify-between h-[60px]">
         <span>{format(new Date(), "eeee, LLLL d, yyyy")}</span> <Weather />
       </h1>
-      <main className="flex gap-[22px] row-start-2 items-center sm:items-start">
+      <main className="flex gap-[22px] row-start-2 items-center sm:items-start mb-0">
         {/* Transit Alerts */}
         <TransitAlerts />
         {/* Calendar Events */}

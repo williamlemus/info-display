@@ -8,7 +8,7 @@ import { calendar_v3 } from "googleapis";
 
 const EventItem = ({ event }: { event: calendar_v3.Schema$Event }) => {
   return (
-    <Card className="w-[380px] mb-2">
+    <Card className="w-[350px] mb-2">
       <CardHeader>
         {event.start?.dateTime} {event.summary}
       </CardHeader>

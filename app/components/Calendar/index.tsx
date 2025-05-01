@@ -7,6 +7,7 @@ export default async function Calendar({ code }: { code: string | null }) {
   if (code) await setToken(code);
   return (
     <div>
+      <h3 className="text-2xl font-semibold mb-2">Events</h3>
       {canShowEvents ? <EventsContainer code={code} /> : <AuthorizeCalendar />}
     </div>
   );
